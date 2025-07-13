@@ -49,7 +49,7 @@ h1 {
 .tema-icon {
     font-size: 3em;
     margin-bottom: 15px;
-    color: #3498db;
+    color: #009e47;
 }
 
 .tema-card h2 {
@@ -118,6 +118,22 @@ h1 {
     font-size: 0.9rem;
     opacity: 0.9;
 }
+
+.btn-volver {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #eee;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-volver:hover {
+    background-color: #ddd;
+  }
+  
 
 @media (max-width: 768px) {
     .footer {
