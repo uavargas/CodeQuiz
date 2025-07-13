@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeQuiz | Desafía tus conocimientos en Programación</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Título principal -->
+        <header>
+            <h1> <strong>CodeQuiz</strong> | Desafía tus conocimientos en Programación y Tecnología</h1>
+        </header>
+
+        <!-- Contenedor de tarjetas de temas -->
+        <main class="temas-container">
+            <!-- Tarjeta 1 - Lógica de Programación -->
+            <article class="tema-card" onclick="cargarTema('logica')">
+                <div class="tema-icon">🧠</div>
+                <h2>Lógica de Programación</h2>
+                <p>Fundamentos esenciales para resolver problemas.</p>
+                <div class="dificultad facil">Fácil</div>
+            </article>
+
+            <!-- Tarjeta 2 - Java -->
+            <article class="tema-card" onclick="cargarTema('java')">
+                <div class="tema-icon">
+                  <i class="fa-brands fa-java"></i>
+                </div>
+                <h2>Java</h2>
+                <p>Estructura y fundamentos básicos del lenguaje.</p>
+                <div class="dificultad medio">Medio</div>
+              </article>
+              
+
+            <!-- Tarjeta 3 - Git y GitHub -->
+            <article class="tema-card" onclick="cargarTema('git')">
+                <div class="tema-icon">
+                  <i class="fa-brands fa-git-alt"></i>
+                </div>
+                <h2>Git</h2>
+                <p>Control de versiones distribuido con Git.</p>
+                <div class="dificultad facil">Fácil</div>
+              </article>
+              
+
+            <!-- Tarjeta 4 - AWS -->
+            <article class="tema-card" onclick="cargarTema('aws')">
+                <div class="tema-icon">
+                  <i class="fa-brands fa-aws"></i>
+                </div>
+                <h2>AWS</h2>
+                <p>Fundamentos clave de la nube con Amazon Web Services.</p>
+                <div class="dificultad medio">Medio</div>
+              </article>
+              
+
+            <!-- Tarjeta 5 - JavaScript -->
+            <article class="tema-card" onclick="cargarTema('javascript')">
+                <div class="tema-icon">
+                  <i class="fa-brands fa-js"></i>
+                </div>
+                <h2>JavaScript</h2>
+                <p>Lógica de programación para la web.</p>
+                <div class="dificultad medio">Medio</div>
+              </article>
+              
+
+            <!-- Tarjeta 6 - Desarrollo Web -->
+            <article class="tema-card" onclick="cargarTema('desarrollo-web')">
+                <div class="tema-icon">🌐</div>
+                <h2>Desarrollo Web</h2>
+                <p>Conoce cómo funciona la web moderna.</p>
+                <div class="dificultad dificil">Difícil</div>
+            </article>
+
+            <!-- Tarjeta 7 - Python -->
+            <article class="tema-card" onclick="cargarTema('python')">
+                <div class="tema-icon">🐍</div>
+                <h2>Python</h2>
+                <p>Lenguaje versátil para desarrollo y análisis de datos.</p>
+                <div class="dificultad facil">Fácil</div>
+            </article>
+
+            <!-- Tarjeta 8 - Bases de Datos -->
+            <article class="tema-card" onclick="cargarTema('bases-de-datos')">
+                <div class="tema-icon">🗃️</div>
+                <h2>Bases de Datos</h2>
+                <p>Fundamentos de SQL y gestión de datos.</p>
+                <div class="dificultad medio">Medio</div>
+            </article>
+        </main>
+
+        <!-- Sección del Quiz (inicialmente oculta) -->
+        <section id="quiz-container" class="hidden">
+            <!-- Aquí irá el contenido del quiz -->
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p class="copyright">&copy; 2025 CodeQuiz | Desafía tus conocimientos en Programación</p>
+                <p class="credits">Creado con <span aria-label="amor">❤️</span> por AlonsoCode</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+    
+</body>
+</html>
