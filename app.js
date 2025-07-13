@@ -278,6 +278,31 @@ const preguntas = {
       dificultad: "facil"
     },
     {
+      pregunta: `Analiza el siguiente fragmento de código Java y responde: ¿Qué valor imprime en consola la línea marcada?
+    
+    <pre><code>public class TestScope {
+        public static void main(String[] args) {
+            int x = 5;
+            {
+                int x = 10; // ← línea marcada
+                System.out.println(x);
+            }
+            System.out.println(x);
+        }
+    }
+    </code></pre>
+    
+    `,
+      opciones: [
+        "10 seguido de 5",
+        "5 seguido de 10",
+        "10 seguido de 10",
+        "Error de compilación por redeclarar la variable x"
+      ],
+      correcta: 3,
+      dificultad: "intermedia"
+    },
+    {
       pregunta: "¿Cuál es la extensión de un archivo compilado en Java?",
       opciones: [".java", ".class", ".exe", ".jar"],
       correcta: 1,
@@ -405,6 +430,8 @@ const preguntas = {
       correcta: 0,
       dificultad: "dificil"
     }
+    
+    
   ],
   git: [],
   aws: [],
