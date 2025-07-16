@@ -1,9 +1,10 @@
 /* Estilos generales */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    background-color: #1a202c;
+    color: #e2e8f0;
     line-height: 1.6;
 }
 
@@ -13,208 +14,272 @@ body {
     padding: 20px;
 }
 
-h1 {
+header h1 {
     text-align: center;
-    color: #2c3e50;
-    margin-bottom: 40px;
-    font-size: 2.2em;
+    color: #4299e1;
+    margin-bottom: 30px;
 }
 
-/* Contenedor de tarjetas */
+/* Estilos para las tarjetas de temas */
 .temas-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
-    padding: 20px;
+    margin-top: 30px;
 }
 
-/* Tarjetas individuales */
 .tema-card {
-    background: white;
-    border-radius: 15px;
-    padding: 25px;
+    background-color: #2d3748;
+    border-radius: 10px;
+    padding: 20px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 2px solid transparent;
-    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
 .tema-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    border-color: #3498db;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .tema-icon {
-    font-size: 3em;
+    font-size: 2.5rem;
+    color: #4299e1;
     margin-bottom: 15px;
-    color: #009e47;
 }
 
 .tema-card h2 {
-    color: #2c3e50;
-    margin: 10px 0;
-    font-size: 1.5em;
+    margin-top: 0;
+    color: #e2e8f0;
 }
 
 .tema-card p {
-    color: #7f8c8d;
-    font-size: 1em;
+    color: #a0aec0;
     margin-bottom: 20px;
 }
 
-/* Indicadores de dificultad */
 .dificultad {
     display: inline-block;
-    padding: 5px 15px;
+    padding: 5px 10px;
     border-radius: 20px;
-    font-size: 0.9em;
+    font-size: 0.8rem;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
-.facil {
-    background: #e8f6ef;
-    color: #2ecc71;
+.dificultad.facil {
+    background-color: #48bb78;
+    color: white;
 }
 
-.medio {
-    background: #fcf3e6;
-    color: #f1c40f;
+.dificultad.medio {
+    background-color: #ed8936;
+    color: white;
 }
 
-.dificil {
-    background: #fdedec;
-    color: #e74c3c;
+.dificultad.dificil {
+    background-color: #f56565;
+    color: white;
 }
 
-/* Clase para ocultar elementos */
-.hidden {
-    display: none;
+/* Estilos para el quiz */
+#quiz-container {
+    background-color: #2d3748;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.quiz-card h2 {
+    color: #e2e8f0;
+    margin-bottom: 20px;
+}
+
+.opciones-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.opcion {
+    background-color: #4a5568;
+    color: #e2e8f0;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.opcion:hover {
+    background-color: #2d3748;
+}
+
+.opcion.correcta {
+    background-color: #48bb78;
+    color: white;
+}
+
+.opcion.incorrecta {
+    background-color: #f56565;
+    color: white;
+}
+
+.quiz-progress {
+    color: #a0aec0;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.btn-volver, .btn-reiniciar {
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-volver:hover, .btn-reiniciar:hover {
+    background-color: #3182ce;
+}
+
+.resultados-card {
+    text-align: center;
+}
+
+.resultados-card h2 {
+    color: #4299e1;
+}
+
+.puntaje {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.porcentaje {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 /* Estilos para el footer */
 .footer {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    padding: 2rem 0;
+    background-color: #2d3748;
+    padding: 20px 0;
+    margin-top: 50px;
     text-align: center;
-    margin-top: auto;
 }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
 }
 
 .copyright {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+    color: #a0aec0;
+    margin-bottom: 5px;
 }
 
 .credits {
+    color: #718096;
     font-size: 0.9rem;
-    opacity: 0.9;
 }
 
-.btn-volver {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: #eee;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .btn-volver:hover {
-    background-color: #ddd;
-  }
-  
-
-@media (max-width: 768px) {
-    .footer {
-        padding: 1.5rem 0;
-    }
-    
-    .copyright, .credits {
-        font-size: 0.85rem;
-    }
+/* Estilos para los modales */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
+.modal.hidden {
+    display: none;
+}
 
-.quiz-card {
-    background: #fff;
+.modal-content {
+    background-color: #2d3748;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.opciones-container {
-    display: grid;
-    gap: 1rem;
-    margin: 2rem 0;
-}
-
-.opcion {
-    padding: 1rem;
-    border: 2px solid #3498db;
-    border-radius: 5px;
-    background: #f8f9fa;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.opcion:hover:not(.correcta):not(.incorrecta) {
-    background: #3498db;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
     color: white;
 }
 
-.correcta {
-    background: #2ecc71 !important;
-    color: white;
-    border-color: #27ae60;
-}
-
-.incorrecta {
-    background: #e74c3c !important;
-    color: white;
-    border-color: #c0392b;
-}
-
-.quiz-progress {
-    text-align: center;
-    color: #7f8c8d;
-    font-size: 0.9rem;
-}
-
-.resultados-card {
-    text-align: center;
-    padding: 2rem;
-}
-
-.puntaje {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin: 1rem 0;
-}
-
-.porcentaje {
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
     font-size: 1.5rem;
-    color: #3498db;
+    cursor: pointer;
+    color: #ccc;
 }
 
-.btn-reiniciar {
-    background: #3498db;
+.close-modal:hover {
+    color: #fff;
+}
+
+#nombreForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#nombreParticipante {
+    padding: 0.8rem;
+    border: 2px solid #4a5568;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #1a202c;
     color: white;
-    padding: 0.8rem 2rem;
+}
+
+.btn-comenzar {
+    padding: 0.8rem;
+    background-color: #4299e1;
+    color: white;
     border: none;
     border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
-    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-comenzar:hover {
+    background-color: #3182ce;
+}
+
+/* Estilos para el modal de resultados */
+#resultadosModal .modal-content {
+    text-align: center;
+}
+
+#resultadoTitulo {
+    color: #4299e1;
+    margin-bottom: 1rem;
+}
+
+#resultadoPuntaje {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#resultadoFeedback {
+    margin-bottom: 1.5rem;
+}
+
+.hidden {
+    display: none;
 }
