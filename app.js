@@ -11,12 +11,21 @@ const preguntas = {
       ],
       correcta: 0,
       dificultad: "facil",
+      tipo: "simple",
     },
     {
       pregunta: "¿Qué estructura se usa para tomar decisiones en programación?",
       opciones: ["Bucle for", "Condicional if", "Función", "Arreglo"],
       correcta: 1,
       dificultad: "facil",
+      tipo: "simple",
+    },
+    {
+      pregunta: "Selecciona los tipos de datos numéricos en programación:",
+      opciones: ["int", "float", "string", "boolean", "double"],
+      correcta: [0, 1, 4],
+      dificultad: "medio",
+      tipo: "multiple",
     },
     {
       pregunta: "¿Qué es un bucle?",
@@ -28,6 +37,14 @@ const preguntas = {
       ],
       correcta: 1,
       dificultad: "facil",
+      tipo: "simple",
+    },
+    {
+      pregunta: "Selecciona las estructuras de control de flujo:",
+      opciones: ["if-else", "for", "variable", "while", "constante"],
+      correcta: [0, 1, 3],
+      dificultad: "medio",
+      tipo: "multiple",
     },
     {
       pregunta: "¿Qué es un algoritmo?",
@@ -39,6 +56,7 @@ const preguntas = {
       ],
       correcta: 1,
       dificultad: "facil",
+      tipo: "simple",
     },
     {
       pregunta: "¿Qué es un arreglo (array)?",
@@ -50,12 +68,14 @@ const preguntas = {
       ],
       correcta: 0,
       dificultad: "facil",
+      tipo: "simple",
     },
     {
       pregunta: "¿Qué hace el operador '==' en programación?",
       opciones: ["Asignación", "Comparación de igualdad", "Suma", "División"],
       correcta: 1,
       dificultad: "facil",
+      tipo: "simple",
     },
     {
       pregunta: "¿Qué es una función?",
@@ -67,6 +87,7 @@ const preguntas = {
       ],
       correcta: 1,
       dificultad: "facil",
+      tipo: "simple",
     },
     {
       pregunta:
@@ -79,12 +100,14 @@ const preguntas = {
       ],
       correcta: 1,
       dificultad: "facil",
+      tipo: "simple",
     },
     {
       pregunta: "¿Qué es un operador lógico?",
       opciones: ["&&", "+", "=", "/"],
       correcta: 0,
       dificultad: "facil",
+      tipo: "simple",
     },
     {
       pregunta: "¿Qué es un comentario en programación?",
@@ -96,6 +119,7 @@ const preguntas = {
       ],
       correcta: 1,
       dificultad: "facil",
+      tipo: "simple",
     },
     {
       pregunta: "¿Qué hace el operador '%' en programación?",
@@ -107,6 +131,7 @@ const preguntas = {
       ],
       correcta: 2,
       dificultad: "medio",
+      tipo: "simple",
     },
     {
       pregunta: "¿Qué es la recursividad?",
@@ -118,6 +143,7 @@ const preguntas = {
       ],
       correcta: 1,
       dificultad: "medio",
+      tipo: "simple",
     },
     {
       pregunta: "¿Qué es un parámetro en una función?",
@@ -129,6 +155,7 @@ const preguntas = {
       ],
       correcta: 0,
       dificultad: "medio",
+      tipo: "simple",
     },
     {
       pregunta: "¿Qué es un bucle 'do-while'?",
@@ -140,6 +167,7 @@ const preguntas = {
       ],
       correcta: 0,
       dificultad: "medio",
+      tipo: "simple",
     },
     {
       pregunta: "¿Qué es un operador ternario?",
@@ -151,6 +179,7 @@ const preguntas = {
       ],
       correcta: 0,
       dificultad: "medio",
+      tipo: "simple",
     },
   ],
   java: [
@@ -164,51 +193,47 @@ const preguntas = {
       ],
       correcta: 1,
       dificultad: "facil",
+      tipo: "simple",
     },
     {
-      pregunta: `Analiza el siguiente fragmento de código Java y responde: ¿Qué valor imprime en consola la línea marcada?
-            
-            <pre><code>public class TestScope {
-                public static void main(String[] args) {
-                    int x = 5;
-                    {
-                        int x = 10; // ← línea marcada
-                        System.out.println(x);
-                    }
-                    System.out.println(x);
-                }
-            }
-            </code></pre>`,
+      pregunta: "Selecciona las características de Java:",
       opciones: [
-        "10 seguido de 5",
-        "5 seguido de 10",
-        "10 seguido de 10",
-        "Error de compilación por redeclarar la variable x",
+        "Orientado a objetos",
+        "Compilado e interpretado",
+        "Débilmente tipado",
+        "Multiplataforma",
+        "Solo para web",
       ],
-      correcta: 3,
+      correcta: [0, 1, 3],
       dificultad: "intermedia",
+      tipo: "multiple",
     },
     {
       pregunta: "¿Cuál es la extensión de un archivo compilado en Java?",
       opciones: [".java", ".class", ".exe", ".jar"],
       correcta: 1,
       dificultad: "facil",
+      tipo: "simple",
     },
     {
       pregunta: "¿Qué palabra clave se usa para definir una clase en Java?",
       opciones: ["function", "define", "class", "object"],
       correcta: 2,
       dificultad: "facil",
+      tipo: "simple",
     },
     {
       pregunta: "¿Qué método es el punto de entrada de un programa Java?",
       opciones: ["start()", "main()", "run()", "init()"],
       correcta: 1,
       dificultad: "facil",
+      tipo: "simple",
     },
   ],
-  git: [],
+  // AWS Questions
   aws: [
+    /* Pregunta 1*/
+
     {
       pregunta:
         "Una aplicación se ejecuta en una instancia de EC2 en una VPC. La aplicación procesa los registros almacenados en un bucket S3. " +
@@ -219,12 +244,14 @@ const preguntas = {
         "Cree un perfil de instancia en Amazon EC2 para permitir el acceso a S3.",
         "Cree una API de Amazon API Gateway con un enlace privado para acceder al punto de enlace de S3.",
       ],
-      correcta: 3,
+      correcta: 0,
       dificultad: "Medio",
+      tipo: "simple",
     },
+    /* Pregunta 2*/
     {
       pregunta:
-        "Una empresa tiene una aplicacion que se ejecuta en una intancia EC2 y utiliza una base de datos de Amazon Aurora. Las instancias EC2 se conectan a la base de datos mediante nombres de usuario y contraseñas " +
+        "Una empresa tiene una aplicacion que se ejecuta en una instancia EC2 y utiliza una base de datos de Amazon Aurora. Las instancias EC2 se conectan a la base de datos mediante nombres de usuario y contraseñas " +
         "que se almacenan localmente en un archivo. La empresa quiere minimizar la sobrecarga operativa de la administracion de credenciales. ¿Que debe hacer un arquitecto de soluciones para lograr este objetivo?",
       opciones: [
         "Utilice AWS Secrets Manager. Active la rotación automática.",
@@ -234,9 +261,137 @@ const preguntas = {
       ],
       correcta: 0,
       dificultad: "Medio",
+      tipo: "simple",
     },
-    
+    /* Pregunta 3*/
+    {
+      pregunta:
+        "Una empresa está lanzando una nueva aplicación y mostrará las métricas de la aplicación en un panel de Amazon CloudWatch. El gerente de producto de la empresa necesita acceder a este tablero periódicamente. El gerente de producto no tiene una cuenta de AWS. Un arquitecto de soluciones debe proporcionar acceso al gerente de producto siguiendo el principio de privilegios mínimos.",
+      opciones: [
+        "Comparta el panel desde la consola de CloudWatch. Ingrese la dirección de correo electrónico del gerente de producto y complete los pasos para compartir. Proporcione un vínculo para compartir para el panel al gerente de producto.",
+        "Cree un usuario de IAM específicamente para el gerente de producto. Adjunte la política administrada de AWS CloudWatchReadOnlyAccess al usuario. Comparta las nuevas credenciales de inicio de sesión con el gerente de producto. Comparta la URL del navegador del panel correcto con el gerente de producto.",
+        "Cree un usuario de IAM para los empleados de la empresa. Adjunte la política administrada de AWS ViewOnlyAccess al usuario de IAM. Comparta las nuevas credenciales de inicio de sesión con el gerente de producto. Pida al administrador de productos que vaya a la consola de CloudWatch y localice el panel por su nombre en la sección Paneles",
+        "Implemente un servidor bastión en una subred pública. Cuando el gerente de producto requiera acceso al panel, inicie el servidor y comparta las credenciales RDP. En el servidor bastión, asegúrese de que el navegador esté configurado para abrir la URL del panel con credenciales de AWS almacenadas en caché que tengan los permisos adecuados para ver el panel.",
+      ],
+      correcta: 0,
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    /* Pregunta 4*/
+    {
+      pregunta:
+        "Una empresa está migrando aplicaciones a AWS. Las aplicaciones se implementan en diferentes cuentas. La empresa administra las cuentas de forma centralizada mediante AWS Organizations. El equipo de seguridad de la empresa necesita una solución de inicio de sesión único (SSO) en todas las cuentas de la empresa. La empresa debe seguir administrando los usuarios y grupos en su Microsoft Active Directory autoadministrado local." +
+        "¿Qué solución cumplirá estos requisitos?",
+      opciones: [
+        "Habilite AWS Single Sign-On (AWS SSO) desde la consola de AWS SSO. Cree una confianza de bosque unidireccional o una confianza de dominio unidireccional para conectar Microsoft Active Directory autoadministrado de la empresa con AWS SSO mediante AWS Directory Service para Microsoft Active Directory.",
+        "Habilite AWS Single Sign-On (AWS SSO) desde la consola de AWS SSO. Cree una confianza de bosque bidireccional para conectar Microsoft Active Directory autoadministrado de la empresa con AWS SSO mediante AWS Directory Service para Microsoft Active Directory.",
+        "Utilice AWS Directory Service. Cree una relación de confianza bidireccional con el Microsoft Active Directory autoadministrado de la empresa.",
+        "Implemente un proveedor de identidades (IdP) local. Habilite AWS Single Sign-On (AWS SSO) desde la consola de AWS SSO.",
+      ],
+      correcta: 1,
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    /* Pregunta 5*/
+
+    {
+      pregunta:
+        "Una empresa necesita almacenar sus registros contables en Amazon S3. Los registros deben ser accesibles de inmediato durante 1 año y luego deben archivarse durante 9 años adicionales. Nadie en la empresa, incluidos los usuarios administrativos y los usuarios raíz, puede eliminar los registros durante todo el período de 10 años. Los registros deben almacenarse con la máxima resistencia." +
+        "¿Qué solución cumplirá estos requisitos?",
+      opciones: [
+        "Almacene los registros en S3 Glacier durante todo el período de 10 años. Utilice una directiva de control de acceso para denegar la eliminación de los registros durante un período de 10 años.",
+        "Almacene los registros mediante S3 Intelligent-Tiering. Utilice una política de IAM para denegar la eliminación de los registros. Después de 10 años, cambie la política de IAM para permitir la eliminación.",
+        "Utilice una política de ciclo de vida de S3 para realizar la transición de los registros de S3 Standard a S3 Glacier Deep Archive después de 1 año. Utilice S3 Object Lock en modo de cumplimiento durante un período de 10 años",
+        "Utilice una política de ciclo de vida de S3 para realizar la transición de los registros de S3 Standard a S3 One Zone-Infrequent Access (S3 One Zone-IA) después de 1 año. Utilice S3 Object Lock en modo de gobernanza durante un período de 10 años",
+      ],
+      correcta: 2,
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    /* Pregunta 6*/
+    {
+      pregunta:
+        "La aplicación HTTP de una empresa está detrás de un equilibrador de carga de red (NLB). El grupo de destino del NLB está configurado para utilizar un grupo de Amazon EC2 Auto Scaling con varias instancias EC2 que ejecutan el servicio web." +
+        "La compañía nota que el NLB no detecta errores HTTP para la aplicación. Estos errores requieren un reinicio manual de las instancias EC2 que ejecutan el servicio web. La empresa necesita mejorar la disponibilidad de la aplicación sin escribir scripts o código personalizados." +
+        "¿Qué debe hacer un arquitecto de soluciones para cumplir con estos requisitos?",
+      opciones: [
+        "Habilite las comprobaciones de estado HTTP en el NLB, proporcionando la URL de la aplicación de la empresa.",
+        "Agregue un trabajo cron a las instancias EC2 para comprobar los registros de la aplicación local una vez por minuto. Si se detectan errores HTTP. La aplicación se reiniciará.",
+        "Reemplace el NLB por un equilibrador de carga de aplicaciones. Habilite las comprobaciones de estado HTTP proporcionando la URL de la aplicación de la empresa. Configure una acción de Auto Scaling para reemplazar las instancias en mal estado.",
+        "Cree una alarma de Amazon Cloud Watch que monitoree la métrica UnhealthyHostCount para el NLB. Configure una acción de Auto Scaling para reemplazar las instancias incorrectas cuando la alarma esté en estado ALARM.",
+      ],
+      correcta: 2,
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    /* Pregunta 7*/
+    {
+      pregunta:
+        "Una empresa recibe 10 TB de datos de instrumentación cada día de varias máquinas ubicadas en una sola fábrica. Los datos consisten en archivos JSON almacenados en una red de área de almacenamiento (SAN) en un centro de datos local ubicado dentro de la fábrica. La compañía quiere enviar estos datos a Amazon S3, donde se puede acceder a ellos mediante varios sistemas adicionales que proporcionan análisis críticos casi en tiempo real. Una transferencia segura es importante porque los datos se consideran confidenciales." +
+        "¿Qué solución ofrece la transferencia de datos MÁS fiable?",
+      opciones: [
+        "AWS DataSync a través de Internet pública",
+        "AWS DataSync a través de AWS Direct Connect.",
+        "AWS Database Migration Service (AWS DMS) a través de Internet pública.",
+        "AWS Database Migration Service (AWS DMS) a través de AWS Direct Connect.",
+      ],
+      correcta: 1,
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    /* Pregunta 8*/
+    {
+      pregunta:
+        "Una empresa utiliza una base de datos SQL para almacenar datos de películas a los que se puede acceder públicamente. La base de datos se ejecuta en una instancia de base de datos Single-AZ de Amazon RDS. Un script ejecuta consultas a intervalos aleatorios cada día para registrar el número de películas nuevas que se han agregado a la base de datos. El script debe informar un total final durante el horario comercial." +
+        "El equipo de desarrollo de la empresa observa que el rendimiento de la base de datos es inadecuado para las tareas de desarrollo cuando se ejecuta el script. Un arquitecto de soluciones debe recomendar una solución para resolver este problema." +
+        "¿Qué solución cumplirá este requisito con la MENOR sobrecarga operativa?",
+      opciones: [
+        "Modifique la instancia de base de datos para que sea una implementación Multi-AZ.",
+        "Cree una réplica de lectura de la base de datos. Configure el script para consultar solo la réplica de lectura.",
+        "Indique al equipo de desarrollo que exporte manualmente las entradas en la base de datos al final de cada día.",
+        "Utilice Amazon ElastiCache para almacenar en caché las consultas comunes que el script ejecuta en la base de datos.",
+      ],
+      correcta: 1,
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    /* Pregunta 9*/
+    {
+      pregunta:
+        "Una empresa almacena información confidencial de los usuarios en un bucket de Amazon S3. La empresa quiere proporcionar acceso seguro a este bucket desde el nivel de aplicación que se ejecuta en instancias de Amazon EC2 dentro de una VPC." +
+        "¿Qué combinación de pasos debe tomar un arquitecto de soluciones para lograr esto? (Elija dos).",
+      opciones: [
+        "Configure un punto de enlace de puerta de enlace de VPC para Amazon S3 dentro de la VPC.",
+        "Cree una política de bucket para hacer públicos los objetos del bucket de S3.",
+        "Cree una política de bucket que limite el acceso solo al nivel de aplicación que se ejecuta en la VPC.",
+        "Cree un usuario de IAM con una política de acceso de S3 y copie las credenciales de IAM en la instancia EC2.",
+        "Cree un rol de IAM con una política de acceso de S3 y asigne el rol a la instancia EC2.",
+        "Cree una instancia NAT y haga que las instancias EC2 utilicen la instancia NAT para acceder al bucket de S3.",
+      ],
+      correcta: [0, 2], // Índices de las respuestas correctas
+      dificultad: "Medio",
+      tipo: "multiple",
+    },
+    /* Pregunta 10*/
+    {
+      pregunta:
+        "Un arquitecto de soluciones debe ayudar a una empresa a optimizar el costo de ejecutar una aplicación en AWS. La aplicación utilizará instancias de Amazon EC2, AWS Fargate y AWS Lambda para la computación dentro de la arquitectura." +
+        "Las instancias EC2 ejecutarán la capa de ingesta de datos de la aplicación. El uso de EC2 será esporádico e impredecible. Las cargas de trabajo que se ejecutan en instancias EC2 se pueden interrumpir en cualquier momento. El front-end de la aplicación se ejecutará en Fargate y Lambda servirá a la capa de API. La utilización del front-end y la utilización de la capa de API serán predecibles en el transcurso del próximo año." +
+        "¿Qué combinación de opciones de compra proporcionará la solución MÁS rentable para alojar esta aplicación? (Elija dos).",
+      opciones: [
+        "Uso de instancias de spot para la capa de ingesta de datos",
+        "Uso de instancias bajo demanda para la capa de ingesta de datos",
+        "Compre un plan de ahorro de cómputo de 1 año para el front-end y la capa de API.",
+        "Compre instancias reservadas con pago inicial de 1 año para la capa de ingesta de datos.",
+        "Compre un plan de ahorro de instancias EC2 de 1 año para el front-end y la capa de API.",
+      ],
+      correcta: [0, 2],
+      dificultad: "Medio",
+      tipo: "multiple",
+    },
   ],
+
+  git: [],
   javascript: [],
   desarrollo_web: [],
   python: [],
@@ -248,13 +403,15 @@ let temaActual = "";
 let preguntaActual = 0;
 let puntaje = 0;
 let nombreParticipante = "";
+let selecciones = []; // Para almacenar las selecciones en preguntas múltiples
+let timeoutId = null; // Para manejar el timeout de transición automática
 
 // Función para cargar un tema
 function cargarTema(tema) {
   const temasEnDesarrollo = [
     "git",
     "javascript",
-    "desarrollo-web",
+    "desarrollo_web",
     "python",
     "basesDeDatos",
   ];
@@ -266,7 +423,18 @@ function cargarTema(tema) {
     return;
   }
 
+  // Limpiar timeout existente si hay uno
+  if (timeoutId) {
+    clearTimeout(timeoutId);
+    timeoutId = null;
+  }
+
+  // Reiniciar estado del quiz
   temaActual = tema;
+  preguntaActual = 0;
+  puntaje = 0;
+  selecciones = [];
+
   mostrarModal();
 }
 
@@ -294,8 +462,6 @@ function iniciarQuiz() {
   ocultarModal();
   document.querySelector(".temas-container").classList.add("hidden");
   document.getElementById("quiz-container").classList.remove("hidden");
-  preguntaActual = 0;
-  puntaje = 0;
   mostrarPregunta();
 }
 
@@ -304,34 +470,101 @@ function mostrarPregunta() {
   const quizContainer = document.getElementById("quiz-container");
   const pregunta = preguntas[temaActual][preguntaActual];
 
-  quizContainer.innerHTML = `
-        <div class="quiz-card">
-            <h2>${pregunta.pregunta}</h2>
-            <div class="opciones-container">
-                ${pregunta.opciones
-                  .map(
-                    (opcion, index) => `
-                    <button class="opcion" onclick="seleccionarRespuesta(${index})">
-                        ${opcion}
-                    </button>
-                `
-                  )
-                  .join("")}
-            </div>
-            <div class="quiz-progress">
-                Pregunta ${preguntaActual + 1} de ${
-    preguntas[temaActual].length
-  }
-            </div>
-            <div class="volver-inicio">
-                <button onclick="volverAInicio()" class="btn-volver">⬅️ Volver al inicio</button>
-            </div>
-        </div>
+  // Reiniciar selecciones para la nueva pregunta
+  selecciones = [];
+
+  let opcionesHTML = "";
+
+  if (pregunta.tipo === "multiple") {
+    // Para preguntas múltiples, usar checkboxes con transición automática
+    opcionesHTML = `
+      <p class="multiple-note">Selecciona todas las opciones correctas:</p>
+      <div class="opciones-container">
+        ${pregunta.opciones
+          .map(
+            (opcion, index) => `
+          <label class="opcion checkbox-option">
+            <input type="checkbox" value="${index}" onchange="toggleSeleccion(${index})">
+            <span>${opcion}</span>
+          </label>
+        `
+          )
+          .join("")}
+      </div>
     `;
+  } else {
+    // Para preguntas simples, usar botones como antes
+    opcionesHTML = `
+      <div class="opciones-container">
+        ${pregunta.opciones
+          .map(
+            (opcion, index) => `
+          <button class="opcion" onclick="seleccionarRespuestaSimple(${index})">
+            ${opcion}
+          </button>
+        `
+          )
+          .join("")}
+      </div>
+    `;
+  }
+
+  quizContainer.innerHTML = `
+    <div class="quiz-card">
+      <h2>${pregunta.pregunta}</h2>
+      ${opcionesHTML}
+      <div class="quiz-progress">
+        Pregunta ${preguntaActual + 1} de ${preguntas[temaActual].length}
+      </div>
+      <div class="volver-inicio">
+        <button onclick="volverAInicio()" class="btn-volver">⬅️ Volver al inicio</button>
+      </div>
+    </div>
+  `;
 }
 
-// Función para seleccionar una respuesta
-function seleccionarRespuesta(opcionIndex) {
+// Función para manejar la selección en preguntas múltiples (CORREGIDA)
+function toggleSeleccion(index) {
+  const pregunta = preguntas[temaActual][preguntaActual];
+  const pos = selecciones.indexOf(index);
+
+  if (pos === -1) {
+    selecciones.push(index);
+  } else {
+    selecciones.splice(pos, 1);
+  }
+
+  // Solo verificar si tenemos la misma cantidad de selecciones que respuestas correctas
+  if (selecciones.length === pregunta.correcta.length) {
+    // Verificar si la respuesta es correcta
+    const esCorrecta = arraysIguales(selecciones, pregunta.correcta);
+
+    // Deshabilitar todos los checkboxes
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach((cb) => (cb.disabled = true));
+
+    // Mostrar retroalimentación visual
+    checkboxes.forEach((checkbox, i) => {
+      const label = checkbox.closest("label");
+      if (pregunta.correcta.includes(i)) {
+        label.classList.add("correcta");
+      } else if (selecciones.includes(i) && !pregunta.correcta.includes(i)) {
+        label.classList.add("incorrecta");
+      }
+    });
+
+    // Sumar puntaje si es correcta
+    if (esCorrecta) {
+      puntaje++;
+    }
+
+    // Transición automática después de 1.5 segundos
+    timeoutId = setTimeout(siguientePregunta, 1500);
+  }
+}
+
+// Función para seleccionar una respuesta simple
+function seleccionarRespuestaSimple(opcionIndex) {
   const opciones = document.querySelectorAll(".opcion");
   const pregunta = preguntas[temaActual][preguntaActual];
 
@@ -345,7 +578,15 @@ function seleccionarRespuesta(opcionIndex) {
     opciones[pregunta.correcta].classList.add("correcta");
   }
 
-  setTimeout(siguientePregunta, 1500);
+  timeoutId = setTimeout(siguientePregunta, 1500);
+}
+
+// Función para comparar dos arrays (para preguntas múltiples)
+function arraysIguales(a, b) {
+  if (a.length !== b.length) return false;
+  const sortedA = [...a].sort();
+  const sortedB = [...b].sort();
+  return sortedA.every((value, index) => value === sortedB[index]);
 }
 
 // Función para pasar a la siguiente pregunta
@@ -391,11 +632,18 @@ function obtenerFeedback(porcentaje) {
 
 // Función para volver al inicio
 function volverAInicio() {
+  // Limpiar timeout si existe
+  if (timeoutId) {
+    clearTimeout(timeoutId);
+    timeoutId = null;
+  }
+
   document.getElementById("quiz-container").classList.add("hidden");
+  document.getElementById("resultadosModal").classList.add("hidden");
   document.querySelector(".temas-container").classList.remove("hidden");
 }
 
-// Función para volver a los temas
+// Función para volver a los temas desde los resultados
 function volverATemas() {
   document.getElementById("resultadosModal").classList.add("hidden");
   document.querySelector(".temas-container").classList.remove("hidden");
@@ -404,24 +652,37 @@ function volverATemas() {
 // Event Listeners
 document.addEventListener("DOMContentLoaded", function () {
   // Cerrar modal al hacer clic en la X
-  document
-    .querySelector(".close-modal")
-    .addEventListener("click", ocultarModal);
+  const closeModal = document.querySelector(".close-modal");
+  if (closeModal) {
+    closeModal.addEventListener("click", ocultarModal);
+  }
 
   // Cerrar modal al hacer clic fuera del contenido
-  document
-    .getElementById("participanteModal")
-    .addEventListener("click", function (e) {
+  const participanteModal = document.getElementById("participanteModal");
+  if (participanteModal) {
+    participanteModal.addEventListener("click", function (e) {
       if (e.target === this) {
         ocultarModal();
       }
     });
+  }
 
   // Manejar envío del formulario
-  document
-    .getElementById("nombreForm")
-    .addEventListener("submit", function (e) {
+  const nombreForm = document.getElementById("nombreForm");
+  if (nombreForm) {
+    nombreForm.addEventListener("submit", function (e) {
       e.preventDefault();
       iniciarQuiz();
     });
+  }
+
+  // Manejar enter en el campo de nombre
+  const nombreParticipanteInput = document.getElementById("nombreParticipante");
+  if (nombreParticipanteInput) {
+    nombreParticipanteInput.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        iniciarQuiz();
+      }
+    });
+  }
 });
