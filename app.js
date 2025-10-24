@@ -391,8 +391,25 @@ const preguntas = {
     },
   ],
 
+  // Oracle Questions
+  oracle: [
+    {
+      // Pregunta 1
+      pregunta:
+        "Tiene objetos almacenados en un depósito de almacenamiento de objetos OCI que desea compartir con una empresa asociada. Usted decide utilizar solicitudes preautenticadas para otorgar acceso a los objetos. ¿Qué afirmación es cierta sobre las solicitudes preautenticadas?",
+      opciones: [
+        "A. Las solicitudes preautenticadas se pueden utilizar para eliminar depósitos u objetos.",
+        "B. Debe proporcionar sus credenciales OCI a la empresa asociada.",
+        "C. Eliminar una solicitud preautenticada no revoca el acceso al depósito u objeto asociado.",
+        "D. No puedes editar una solicitud preautenticada",
+      ],
+      correcta: 3,
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+  ],
+
   git: [],
-  javascript: [],
   desarrollo_web: [],
   python: [],
   basesDeDatos: [],
@@ -408,13 +425,7 @@ let timeoutId = null; // Para manejar el timeout de transición automática
 
 // Función para cargar un tema
 function cargarTema(tema) {
-  const temasEnDesarrollo = [
-    "git",
-    "javascript",
-    "desarrollo_web",
-    "python",
-    "basesDeDatos",
-  ];
+  const temasEnDesarrollo = ["git", "desarrollo_web", "python", "basesDeDatos"];
 
   if (temasEnDesarrollo.includes(tema)) {
     alert(
