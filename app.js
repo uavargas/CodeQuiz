@@ -407,6 +407,331 @@ const preguntas = {
       dificultad: "Medio",
       tipo: "simple",
     },
+    // Pregunta 2
+    {
+      pregunta:
+        "¿Cuál de los siguientes es un prefijo CIDR RFC 1918 válido que se puede utilizar para crear una red de nube virtual (VCN) de Oracle Cloud Infrastructure (OCI)?",
+      opciones: [
+        "A. 172.16.0.0/12",
+        "B. 189.215.154.89/32",
+        "C. 0.0.0.0/0",
+        "D. 192.168.0.0/16",
+        "E. 10.0.0.0/8",
+        "F. 192.268.0.0/24",
+      ],
+      correcta: 3, // respuestas correctas: A, D y E
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    // Pregunta 3
+    {
+      pregunta:
+        "Tienes un volumen de bloque creado en esta región del Oeste de EE. UU. (Phoenix). Habilitó la replicación entre regiones para el volumen y seleccionó US West (San José) como región de designación. Ahora, le gustaría crear un nuevo volumen a partir de la réplica del volumen en la región Oeste de EE. UU. (San José). ¿Qué debes hacer?",
+      opciones: [
+        "A. Activa la réplica.",
+        "B. Iniciar la réplica.",
+        "C. No se requiere ninguna acción. De forma predeterminada, la réplica está disponible como volumen de bloque.",
+        "D. Activa la réplica.",
+      ],
+      correcta: 0, // Respuesta correcta: A. Activa la réplica.
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    // Pregunta 4
+    {
+      pregunta:
+        "Un cliente ha informado que no puede acceder a un sistema de archivos incluso cuando su dirección IP está permitida en las opciones de exportación. Al investigar, te das cuenta de que una regla de la lista de seguridad bloquea el acceso al agente de montaje. ¿Qué capa necesita ajuste?",
+      opciones: [
+        "A. Seguridad de la red",
+        "B. Servicio IAM",
+        "C. Capa de seguridad UNIX",
+        "D. Opciones de exportación de interfaz",
+      ],
+      correcta: 0, // Respuesta correcta: A. Seguridad de la red
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    // Pregunta 5
+    {
+      pregunta:
+        "¿Cuál de las siguientes afirmaciones es cierta sobre la clonación de un volumen en el servicio Block Volume de Oracle Cloud Infrastructure (OCI)?",
+      opciones: [
+        "A. Crear un clon lleva más tiempo que crear una copia de seguridad de un volumen.",
+        "B. Es necesario separar un volumen antes de clonarlo.",
+        "C. Puede cambiar el tamaño del volumen del bloque al clonar un volumen.",
+        "D. Puedes clonar un volumen en otra región.",
+      ],
+      correcta: 2, // Respuesta correcta: C. Puede cambiar el tamaño del volumen del bloque al clonar un volumen.
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    // Pregunta 6
+    {
+      pregunta:
+        "¿Cuál es el propósito principal del servicio de aceleración de aplicaciones web ofrecido por Oracle Cloud Infrastructure (OCI)?",
+      opciones: [
+        "A. Mejorar la confiabilidad de los equilibradores de carga HTTP de capa 7 mediante la implementación de medidas de redundancia",
+        "B. Cifrar el tráfico HTTP para garantizar una comunicación segura entre clientes y servidores",
+        "C. Acelerar el tráfico en los balanceadores de carga HTTP de capa 7 mediante técnicas de almacenamiento en caché y compresión",
+        "D. Monitoreo y análisis de patrones de tráfico HTTP para identificar posibles vulnerabilidades de seguridad",
+      ],
+      correcta: 2,
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    // Pregunta 7
+    {
+      pregunta:
+        "Como arquitecto de redes, se le ha encomendado la tarea de crear una conexión totalmente redundante desde su centro de datos local a su red de nube virtual (VCN) en la región us-ashburn-1. ¿Cuáles DOS opciones cumplirán este requisito? (Elige dos.)",
+      opciones: [
+        "A. Configure un circuito virtual FastConnect en la región us-ashburn-1 y el segundo circuito virtual FastConnect en la región us-phoenix-1.",
+        "B. Configure dos circuitos virtuales FastConnect en la región us-ashburn-1 y finalícelos en diversos hardware locales.",
+        "C. Configure un circuito virtual FastConnect en la región us-ashburn-1 y una VPN de sitio a sitio en la región us-ashburn-1.",
+        "D. Configure una VPN de sitio a sitio desde un único CPE local.",
+      ],
+      correcta: [1, 2], // Respuestas correctas: B y C
+      dificultad: "Avanzado",
+      tipo: "multiple",
+    },
+    // Pregunta 8
+
+    {
+      pregunta:
+        "Una empresa movió accidentalmente una instancia de base de datos crítica a un compartimento diferente dentro de su arrendamiento de OCI. Las políticas IAM existentes se asignaron previamente al compartimento original de la base de datos y se les otorgó acceso a usuarios autorizados. ¿Cómo afectará esto al acceso de los usuarios a la base de datos?",
+      opciones: [
+        "A. Los compartimentos no están cubiertos por las políticas del IAM; sólo se aplican a los recursos.",
+        "B. El acceso a la base de datos será revocado inmediatamente para todos los usuarios autorizados al cambio de compartimento.",
+        "C. Las políticas IAM existentes seguirán funcionando normalmente, independientemente del movimiento del compartimento.",
+        "D. Los compartimentos impiden el movimiento de recursos; una vez que un recurso se coloca en un compartimento, no se puede mover.",
+      ],
+      correcta: 1, //  Respuesta correcta: B
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    // Pregunta 9
+    {
+      pregunta:
+        "Una gran organización utiliza Oracle Cloud Infrastructure (OCI) y ha implementado una compleja estructura de compartimentos. Tienen un compartimento raíz, con múltiples compartimentos anidados para varios proyectos, equipos y entornos. Se crea una nueva máquina virtual para un proyecto específico en un subcompartimento de desarrollo. ¿Qué afirmación es INCORRECTA respecto a la máquina virtual en este escenario?",
+      opciones: [
+        "A. El acceso a la máquina virtual sólo está controlado por políticas adjuntas al compartimento raíz.",
+        "B. La máquina virtual puede interactuar con recursos como una red de nube virtual (VCN) en un compartimento diferente.",
+        "C. En caso necesario, la máquina virtual se puede trasladar a un compartimento diferente dentro del arrendamiento.",
+        "D. La máquina virtual está asociada a un compartimento específico y no puede existir simultáneamente en ningún otro compartimento.",
+      ],
+      correcta: 0, // Respuesta correcta: A
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    // Pregunta 10
+    {
+      pregunta:
+        "En comparación con las políticas de IAM, ¿cuál es una ventaja CLAVE de utilizar roles de administrador para el control de acceso dentro de los dominios de identidad de OCI IAM?",
+      opciones: [
+        "A. Proporcionar control granular sobre el acceso a compartimentos específicos dentro del dominio",
+        "B. Se puede utilizar para otorgar acceso a recursos fuera del dominio de identidad asociado",
+        "C. Simplifica la gestión eliminando la necesidad de crear políticas complejas",
+        "D. Ofrecen una amplia gama de combinaciones de permisos además de las políticas de IAM",
+      ],
+      correcta: 2, // Respuesta correcta: C
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+
+
+    // pregunta 11 /////////////////////////
+    {
+      pregunta:
+        "Como ingeniero de red responsable de gestionar la infraestructura de red virtual en Oracle Cloud Infrastructure (OCI) para su organización, decide utilizar la herramienta Network Visualizer proporcionada por OCI. ¿Por qué el visualizador de red es demasiado valioso para gestionar la infraestructura de red virtual en OCI?",
+      opciones: [
+        "A. Visualiza la topología de todas las VCN en una región y un arrendamiento seleccionados, lo que permite una comprensión concisa de las relaciones y conexiones.",
+        "B. Proporciona información detallada sobre los componentes físicos de la red.",
+        "C. Genera informes automatizados sobre métricas de rendimiento de la red, lo que facilita la toma de decisiones para optimizar los recursos de la red y la asignación de ancho de banda.",
+        "D. Ofrece monitoreo en tiempo real del tráfico de red, lo que permite la identificación proactiva de amenazas de seguridad e intentos de acceso no autorizados.",
+      ],
+      correcta: 0,
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    {
+      pregunta:
+        "La empresa XYZ está gastando $300,000.00 USD por mes en tarifas de salida por 7 Petabytes (1 Petabyte = 1000 Terabytes) que consumen para la transferencia de datos salientes en América del Norte con su proveedor de nube actual. La compañía busca reducir ese gasto considerablemente sin reducir el consumo. Propone la migración a OCI porque la transferencia de datos salientes de Gigabyte en Norteamérica cuesta solo 0,0085 USD al mes. ¿Qué OCI, cuánto gastarán al mes por 7 petabytes de transferencia de datos salientes? (1 terabyte = 1000 gigabytes)",
+      opciones: [
+        "A. 59415",
+        "B. 150000",
+        "C. 59500",
+        "D. $0.00 (gratis con OCI)",
+      ],
+      correcta: 2,
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    {
+      pregunta:
+        "Está realizando una copia de seguridad de los datos locales en el servicio de almacenamiento de objetos de Oracle Cloud Infrastructure (OCI). Sus requisitos son: 1. Las copias de seguridad deben conservarse durante al menos 31 días completos. 2. Los datos deben ser accesibles inmediatamente si es necesario después de la copia de seguridad. ¿Qué nivel de OCI Object Storage es adecuado para almacenar el backup para minimizar el coste?",
+      opciones: [
+        "A. Nivel de organización automática por niveles",
+        "B. Nivel de archivo",
+        "C. Nivel de acceso poco frecuente",
+        "D. Nivel Estándar",
+      ],
+      correcta: 2,
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    {
+      pregunta:
+        "Qué sentencias TWO son VERDADERAS sobre las direcciones IP públicas en Oracle Cloud Infrastructure (OCI)? (Elija dos).",
+      opciones: [
+        "A. Debe utilizar direcciones IP públicas proporcionadas por OCI. No puede traer sus propias direcciones IP a OCI.",
+        "B. De forma predeterminada, una instancia de una subred pública tenía una dirección IP pública principal.",
+        "C. Las direcciones IP públicas pueden ser efímeras o reservadas.",
+        "D. Puede asignar a una instancia determinada varias IP públicas en una o varias VNIC.",
+      ],
+      correcta: [2, 3],
+      dificultad: "Medio",
+      tipo: "multiple",
+    },
+    {
+      pregunta:
+        "¿Qué afirmación es TRUE sobre la delegación de un dominio existente al servicio DNS de Oracle Cloud Infrastructure (OCI)?",
+      opciones: [
+        "A. Los dominios se pueden delegar a OCI DNS a través de partners de FastConnect.",
+        "B. Los dominios se pueden autodelegar a OCI DNS desde su propio portal de servicios.",
+        "C. Los dominios se pueden delegar a OCI DNS desde el portal de autoservicio del registrador de dominios.",
+        "D. Todos los dominios se pueden recuperar en OCI DNS a través de DYN.",
+        "E. Los dominios se pueden delegar a OCI DNS desde OCI Marketplace.",
+      ],
+      correcta: 2,
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    {
+      pregunta:
+        "¿Qué política de dirección de administración de tráfico facilita la distribución del tráfico DNS a puntos finales específicos en función de la ubicación geográfica de los usuarios finales?",
+      opciones: [
+        "A. Dirección de prefijos IP",
+        "B. Dirección de geolocalización",
+        "C. Dirección de proximidad",
+        "D. Dirección ASN",
+      ],
+      correcta: 1,
+      dificultad: "Bajo",
+      tipo: "simple",
+    },
+    {
+      pregunta:
+        "Planea cargar un archivo grande (3 TiB) en Oracle Cloud Infrastructure (OCI) Object Storage. Desea minimizar el impacto de los errores de red durante la carga y, por lo tanto, decide utilizar la capacidad de carga multiparte. ¿Qué DOS afirmaciones son verdaderas sobre la realización de una carga multiparte mediante la API de carga multiparte?",
+      opciones: [
+        "A. Mientras una carga multiparte sigue activa, puede seguir agregando partes siempre que el número total sea inferior a 10,000.",
+        "B. No es necesario dividir el objeto en pares. Object Storage divide el objeto en partes y carga todas las partes automáticamente.",
+        "C. No es necesario confirmar la carga después de haber cargado todas las partes del objeto.",
+        "D. Cuando se divide el objeto en partes individuales, cada parte puede tener un tamaño de hasta 50 GiB.",
+      ],
+      correcta: [0, 3],
+      dificultad: "Medio",
+      tipo: "multiple",
+    },
+    {
+      pregunta:
+        "Una empresa ha desplegado una aplicación de varios niveles en Oracle Cloud Infrastructure (OCI), con servidores web en una subred pública y servidores de bases de datos en una subred privada. Los servidores de bases de datos necesitan acceder a los datos de OCI Object Storage y la empresa quiere asegurarse de que esta comunicación sea segura y no esté expuesta a la Internet pública. ¿Qué función de OCI se debe utilizar?",
+      opciones: [
+        "A. Utilice un gateway de servicio para establecer una conexión segura con Object Storage.",
+        "B. Utilice una puerta de enlace de intercambio de tráfico local para emparejar con la subred de Object Storage.",
+        "C. Utilice una puerta de enlace VPN para crear un túnel cifrado a Object Storage.",
+        "D. Utilice una puerta de enlace NAT para habilitar el acceso privado a Object Storage.",
+      ],
+      correcta: 0,
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    {
+      pregunta:
+        "Su empresa vende servicios a fotógrafos donde los clientes pueden obtener una vista previa de las fotos para las que desean impresiones. Para evitar copias no autorizadas, las fotos de muestra tienen una resolución más baja y tienen marcas de agua. Las fotos se procesan después de cargarlas. El proceso es rápido pero no inmediato. Crea muestras y las envía al almacenamiento fuera de las instancias. ¿Qué tipo de instancia es ideal para un proceso como este? ¿De corta duración y uno que mantiene el costo bajo?",
+      opciones: [
+        "A. Instancias deportivas",
+        "B. Instancias bajo demanda",
+        "C. Instancias interrumpibles",
+        "D. Instancias ampliable",
+      ],
+      correcta: 2,
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    {
+      pregunta:
+        "Oracle Cloud Agent es un proceso ligero que gestiona plugins que se ejecutan en instancias informáticas. ¿Cuál NO es un nombre de plugin de Oracle Cloud Agent válido?",
+      opciones: [
+        "A. Comando de ejecución de instancia informática",
+        "B. Agente de servicio de administración del sistema operativo",
+        "C. Agente de migración en vivo",
+        "D. Bastion",
+      ],
+      correcta: 3,
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    {
+      pregunta:
+        "Está lanzando un nuevo proyecto en la región Oeste de EE. UU. (Phoenix). Desea reservar la capacidad de proceso que se menciona a continuación para que la capacidad esté disponible para las cargas de trabajo cuando la necesite. 10 VM. Instancias Standard2.2 6VM. Instancias Standard.E4.Flex El proyecto también requiere que tenga en cuenta la alta disponibilidad y coloque las instancias en al menos dos dominios de disponibilidad. Como mínimo, ¿cuántas reservas de capacidad crearía para cumplir con este requisito?",
+      opciones: ["A. Dos", "B. Tres", "C. Cuatro", "D. Uno"],
+      correcta: 2,
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    {
+      pregunta:
+        "Debe configurar principales de instancia para que una aplicación que se ejecuta en una instancia pueda llamar a los servicios públicos de Oracle Cloud Infrastructure (OCI), sin necesidad de configurar credenciales de usuario o un archivo de configuración. Un desarrollador de tu equipo ya ha configurado la aplicación creada con un SDK de OCI para autenticarse mediante el proveedor de principales de instancia. ¿Cuál NO es un paso necesario para completar esta configuración?",
+      opciones: [
+        "A. Implemente la aplicación y el SDK en todas las instancias que pertenecen al grupo dinámico.",
+        "B. Genere tokens de autenticación para permitir que las instancias del grupo dinámico se autentiquen con las API.",
+        "C. Cree una política que conceda permisos al grupo dinámico para acceder a los servicios del compartimento o arrendamiento.",
+        "D. Cree un grupo dinámico con reglas coincidentes para especificar qué instancias pueden realizar llamadas a la API en los servicios.",
+      ],
+      correcta: 1,
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    {
+      pregunta:
+        "Tiene tres compartimentos: ProyectoA, ProyectoB y ProyectoC. Para cada compartimento, hay un grupo de administradores configurado: A-Admins, B-Admins y C-Admins. Cada grupo de administración tiene acceso completo a sus respectivos compartimentos, como se muestra en el gráfico siguiente. Su organización ha configurado un espacio de nombres de etiqueta, EmployeeGroup.Role y todos sus grupos de administración están etiquetados con un valor de 'Admin'. Desea configurar un compartimento de prueba para que los miembros de los tres proyectos lo compartan. También debe proporcionar acceso de administrador a los tres grupos de administradores existentes. ¿Qué política escribiría para realizar esta tarea?",
+      opciones: [
+        "A. Permitir que el grupo any-group gestione todos los recursos en el compartimento Test where request.principal.group.tag.EmpoyeeGroup.Role= 'Admin'",
+        "B. Permitir que dynamic-group gestione todos los recursos en el compartimento Test where request.principal.group.tag.EmpoyeeGroup.Role= 'Admin'",
+        "C. Permitir que cualquier usuario gestione todos los recursos en el compartimento Test donde request.principal.group.tag.EmployeeGroup.Role= 'Admin'",
+        "D. Permitir que todos los grupos gestionen todos los recursos en el compartimento Test donde request.principal.group.tag.EmployeeGroup.Role= 'Admin'",
+      ],
+      correcta: 1,
+      dificultad: "Alta",
+      tipo: "simple",
+    },
+    {
+      pregunta:
+        "¿Cuáles son los dos tipos de filtros de captura que se pueden crear para la supervisión de redes?",
+      opciones: [
+        "A. Filtros de captura de registros de flujo y filtros de captura de paquetes",
+        "B. Filtros de captura VTAP y filtros de captura de red",
+        "C. Filtros de captura de registro de flujo y filtros de captura VTAP",
+        "D. Filtros de captura de control de flujo y filtros de captura de tráfico",
+      ],
+      correcta: 0,
+      dificultad: "Medio",
+      tipo: "simple",
+    },
+    {
+      pregunta:
+        "Puede asociar recursos a una puerta de enlace de enrutamiento dinámico (DRG). Seleccione TRES de estos recursos. (Elija tres).",
+      opciones: [
+        "A. Conexión de emparejamiento local",
+        "B. Subred",
+        "C. Circuitos virtuales",
+        "D. IPSec Tunnel",
+        "E. Remote Perring Connections",
+        "F. VNIC",
+      ],
+      correcta: [0, 2, 3],
+      dificultad: "Alta",
+      tipo: "multiple",
+    },
   ],
 
   git: [],
