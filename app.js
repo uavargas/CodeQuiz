@@ -674,7 +674,7 @@ const preguntas = {
       pregunta:
         "Está lanzando un nuevo proyecto en la región Oeste de EE. UU. (Phoenix). Desea reservar la capacidad de proceso que se menciona a continuación para que la capacidad esté disponible para las cargas de trabajo cuando la necesite. 10 VM. Instancias Standard2.2 6VM. Instancias Standard.E4.Flex El proyecto también requiere que tenga en cuenta la alta disponibilidad y coloque las instancias en al menos dos dominios de disponibilidad. Como mínimo, ¿cuántas reservas de capacidad crearía para cumplir con este requisito?",
       opciones: ["A. Dos", "B. Tres", "C. Cuatro", "D. Uno"],
-      correcta: 2,
+      correcta: 0,
       dificultad: "Medio",
       tipo: "simple",
     },
